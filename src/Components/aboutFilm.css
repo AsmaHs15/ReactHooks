@@ -1,0 +1,21 @@
+.back {
+    text-align: center;
+    color:#223343;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .back:hover{
+    text-align: center;
+    color:#234668;
+    background-color:#ccc;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .movieDetail
+  {
+    padding: 70px 120px;
+    margin: 50px 50px;
+    text-align: justify;
+  }

@@ -15,7 +15,7 @@ const AddMovie = ({ addMovie }) => {
   const [date, setDate] = useState('');
   const [description, setDescription] = useState('');
   const [rating, setRating] = useState('');
-
+  const [trailer, setTrailer] = useState('');
 
   function openModal() {
     setIsOpen(true);
@@ -29,6 +29,7 @@ const AddMovie = ({ addMovie }) => {
     setImgHero('');
     setDate('');
     setDescription('');
+    setTrailer('');
   }
 
 
@@ -40,6 +41,7 @@ const AddMovie = ({ addMovie }) => {
       date: date,
       description: description,
       rating: rating,
+      trailer : trailer
     };
     
     addMovie(e, newMovie);
@@ -97,7 +99,7 @@ const AddMovie = ({ addMovie }) => {
           <input
             value={imgTop}
             type="url"
-            name="imageTop"
+            name="imgTop"
             required
             onChange={(e) => setImgTop(e.target.value)}
           />
@@ -107,10 +109,19 @@ const AddMovie = ({ addMovie }) => {
           <input
             value={imgHero}
             type="url"
-            name="image"
+            name="imgHero"
             required
             onChange={(e) => setImgHero(e.target.value)}
           />
+   <label>Trailer URL</label>
+          <input
+            value={trailer}
+            type="url"
+            name="trailer"
+            
+            onChange={(e) => setTrailer(e.target.value)}
+          />
+
           <label>Description</label>
           <textarea
             value={description}

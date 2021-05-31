@@ -1,25 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Rate from '../Rate';
 
 import './MovieCard.css';
 
-const MovieCard = ({ movie: {imgTop, imgHero,name,date, description, rating} }) => {
+const MovieCard = ({ movie: {id,imgTop, imgHero,name,date, description, rating} }) => {
   return (
-    <>
+
     
-    {/* <div className='container'> */}
-      {/* <div className='movie'> */}
-       
      <div style={{display:'flex', justifyContent:'spaceBetween'}}> 
 
 
-
+ 
       <div class="container">
       {/* <div class="heading"></div> */}
-
+      
                 <div className="cards-wrapper">
                 <div className="card">
+                 <Link to={`/profile/${id}`}> 
                   <img src={imgTop} className="image-top"/>
                   <img src={imgHero} className="profile-image"/>
 
@@ -29,7 +28,7 @@ const MovieCard = ({ movie: {imgTop, imgHero,name,date, description, rating} }) 
                   </ul>
                   
                   <p className="about-film">{description}</p>
-
+                </Link> 
                   <button type="button">Watching</button>
                 
                   <div className='movie-rating'>
@@ -38,11 +37,12 @@ const MovieCard = ({ movie: {imgTop, imgHero,name,date, description, rating} }) 
     
 </div>
 </div>
+
 </div>
 
 
  </div> 
-</>
+
 
   );
 };
